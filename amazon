@@ -1,0 +1,22 @@
+package DynamicWebTable;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Amazon {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\browser drivers\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.amazon.com/Oculus-Quest-Advanced-All-One-Virtual/dp/B099VMT8VZ/ref=lp_16225009011_1_3?dchild=1");
+		driver.manage().window().maximize();
+		driver.navigate().refresh();
+driver.findElement(By.xpath("(//span[contains(text(),'Headset — 128 GB')])[1]/../../../../preceding-sibling::div[3]/div[2]/div/div/div/div/div/div/div/form/div/div/div/div/div[9]/div/span/span/span/input[@id='add-to-cart-button']")).click();
+		
+		
+		
+		
+	}
+}
